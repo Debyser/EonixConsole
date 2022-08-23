@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Eonix.Domain.Model;
 
 namespace Enonix.Domain.Model
 {
-    public class Monkey
+    public class Monkey 
     {
+        public int Number { get; set; }
+        public Trick[] Tricks { get; set;}
     }
 }

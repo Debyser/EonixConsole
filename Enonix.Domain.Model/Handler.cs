@@ -1,17 +1,8 @@
-﻿using Enonix.Domain.Model.Services;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Enonix.Domain.Model
+﻿namespace Enonix.Domain.Model
 {
     public class Handler
     {
-        private Monkey _monkey;
-
-        public Handler(Monkey monkey)
-        {
-            _monkey = monkey;
-        }
+        public string Name { get; set; }
+        public Monkey Monkey { get; set; }
     }
 }
