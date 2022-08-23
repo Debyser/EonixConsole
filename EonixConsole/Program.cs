@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EonixConsole.Extensions;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace EonixConsole
 {
@@ -7,6 +9,11 @@ namespace EonixConsole
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+            //var serviceProvider = new ServiceCollection()
+            //    .RegisterServices();
+            Console.WriteLine("End of the World!");
+
         }
     }
 }
