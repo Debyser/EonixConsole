@@ -5,9 +5,4 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Enonix.Domain.Model\Eonix.Domain.Model.csproj" />
-    <ProjectReference Include="..\Eonix.Domain\Eonix.Domain.csproj" />
-  </ItemGroup>
-
 </Project>
