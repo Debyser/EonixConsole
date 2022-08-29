@@ -8,17 +8,13 @@ namespace EonixConsole
     /// </summary>
     public static class EnumExtensions
     {
-        public static string GetDescription(this Enum value) => GetEnumDescription(value);
-
-        #region private methods
-        private static string GetEnumDescription(Enum value)
+        public static string GetDescription(this Enum value) 
         {
             var fieldInfo = value.GetType().GetField(value.ToString());
             var attributes = fieldInfo.GetCustomAttributes(typeof(DescriptionAttribute), false) as DescriptionAttribute[];
 
             return attributes.Length > 0 ? attributes[0].Description : value.ToString();
         }
-        #endregion 
 
     }
 }
