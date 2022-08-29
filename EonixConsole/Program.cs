@@ -5,10 +5,10 @@ namespace EonixConsole
     {
         static void Main(string[] args)
         {
-            var monkeyOne = new Monkey(1, new Trick[2] { Trick.Magic, Trick.Acrobatics });
+            var monkeyOne = new Monkey(1, new Trick[2] { Trick.Music, Trick.Acrobatics });
             var handlerOne = new Handler(monkeyOne);
 
-            var monkeyTwo = new Monkey(2, new Trick[2] { Trick.Acrobatics, Trick.Magic });
+            var monkeyTwo = new Monkey(2, new Trick[2] { Trick.Acrobatics, Trick.Music });
             var handlerTwo = new Handler(monkeyTwo);
 
             var observerSpectator = new Spectator();

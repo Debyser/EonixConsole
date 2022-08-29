@@ -8,7 +8,7 @@ namespace EonixConsole
     /// </summary>
     public static class EnumExtensions
     {
-        public static string GetDescription(this Enum value) => GetDescription(value);
+        public static string GetDescription(this Enum value) => GetEnumDescription(value);
 
         #region private methods
         private static string GetEnumDescription(Enum value)

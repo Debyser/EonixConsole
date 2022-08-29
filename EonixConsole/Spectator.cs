@@ -11,10 +11,10 @@ namespace EonixConsole
         {
             var monkey = subject as Monkey;
             if (monkey == null) return;
-            if (trick == Trick.Magic)
-                Console.WriteLine(string.Format(_response, "spectateur siffle pendant le tour de magie du singe", monkey.Number));
+            if (trick == Trick.Music)
+                Console.WriteLine(string.Format(_response, $"spectateur siffle pendant le tour de {trick.GetDescription()}", monkey.Number));
             else
-                Console.WriteLine(string.Format(_response, "spectateur applaudit pendant le tour d'acrobatie", monkey.Number));
+                Console.WriteLine(string.Format(_response, $"spectateur applaudit pendant le tour d'{trick.GetDescription()}", monkey.Number));
         }
     }
 }

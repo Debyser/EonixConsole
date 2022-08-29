@@ -5,8 +5,8 @@ namespace EonixConsole
     public enum Trick
     {
         None = 0,
-        [Description("Magie")]
-        Magic = 1,
+        [Description("Musique")]
+        Music = 1,
         [Description("Acrobatie")]
         Acrobatics = 2,
     }
