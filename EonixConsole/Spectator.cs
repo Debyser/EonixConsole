@@ -12,7 +12,7 @@ namespace EonixConsole
             var monkey = subject as Monkey;
             if (monkey == null) return;
             if (trick == Trick.Magic)
-                Console.WriteLine(string.Format(_response, "spectateur applaudit pendant le tour de magie du singe", monkey.Number));
+                Console.WriteLine(string.Format(_response, "spectateur siffle pendant le tour de magie du singe", monkey.Number));
             else
                 Console.WriteLine(string.Format(_response, "spectateur applaudit pendant le tour d'acrobatie", monkey.Number));
         }

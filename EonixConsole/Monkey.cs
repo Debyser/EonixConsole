@@ -1,5 +1,4 @@
 ﻿using EonixConsole.Interfaces;
-using System;
 using System.Collections.Generic;
 
 namespace EonixConsole
@@ -20,15 +19,9 @@ namespace EonixConsole
             _tricks = tricks;
         }
 
-        public void Attach(IObserver observer)
-        {
-            _observers.Add(observer);
-        }
+        public void Attach(IObserver observer) => _observers.Add(observer);
 
-        public void Detach(IObserver observer)
-        {
-            _observers.Remove(observer);
-        }
+        public void Detach(IObserver observer) => _observers.Remove(observer);
 
         public void ExecuteTricks()
         {
@@ -49,8 +42,6 @@ namespace EonixConsole
                 Notify(this, _tricks[i]);
             }
         }
-
-        public void Notify(Trick trick) => throw new NotImplementedException();
 
         public void Notify(ISubject subject, Trick trick)
         {

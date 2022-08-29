@@ -25,6 +25,7 @@ namespace EonixConsole
             monkeyTwo.Detach(observerSpectator);
 
             System.Console.WriteLine("End of the program");
+            System.Console.ReadLine();
         }
     }
 }
