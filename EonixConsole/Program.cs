@@ -1,19 +1,31 @@
-﻿using EonixConsole.Extensions;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-
+﻿
 namespace EonixConsole
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var monkeyOne = new Monkey(1, new Trick[2] { Trick.Music, Trick.Acrobatics });
+            var handlerOne = new Handler(monkeyOne);
 
-            //var serviceProvider = new ServiceCollection()
-            //    .RegisterServices();
-            Console.WriteLine("End of the World!");
+            var monkeyTwo = new Monkey(2, new Trick[2] { Trick.Acrobatics, Trick.Music });
+            var handlerTwo = new Handler(monkeyTwo);
 
+            var observerSpectator = new Spectator();
+            monkeyOne.Attach(observerSpectator);
+            monkeyTwo.Attach(observerSpectator);
+
+            handlerOne.Monkey.ExecuteTricks(); 
+            handlerTwo.Monkey.ExecuteTricks();
+
+            //handlerOne.Monkey.ExecuteOneTrick(Trick.Magic); 
+        
+
+            monkeyOne.Detach(observerSpectator);
+            monkeyTwo.Detach(observerSpectator);
+
+            System.Console.WriteLine("End of the program");
+            System.Console.ReadLine();
         }
     }
 }
